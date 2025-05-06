@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xitan <xitan@student.42singapore.sg>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 16:38:49 by xitan             #+#    #+#             */
-/*   Updated: 2025/05/06 16:38:49 by xitan            ###   ########.fr       */
+/*   Created: 2025/05/06 18:11:10 by xitan             #+#    #+#             */
+/*   Updated: 2025/05/06 18:11:10 by xitan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <unistd.h>
+#include <unistd.h>
+#include <stdio.h>
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-
-#endif
+int	ft_isascii(int c)
+{
+	if ((c >= 0 && c <= 127))
+		return (1);
+	return (0);
+}
